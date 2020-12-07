@@ -1,3 +1,24 @@
+## This is a forked project for practicing Spring (not SpringBoot) testing
+So this project has the standard JSP, XML, etc. structure
+
+- using the Spring Context to...
+
+    - Test the auto wiring of beans (EJB)
+    - Test the setting of active profiles
+    - Spring Test Configuration
+    - JUnit 4 and JUnit 5
+    
+    - Spring MVC Test
+        - Spring MVC Test does not use a running Servlet container
+        - No network request is made (ie to port 80 or 8080)
+        - HTML is not generated, thus templates are not executed (JSP, Thymeleaf, etc.)
+        - You can test the view (template) requested, or redirected to
+            - but cannot test expected HTML to be rendered as a result
+        - Spring does support testing with a running container when needed
+
+
+
+
 # Spring Pet Clinic 
 
 All source code examples in the repository are for my [Online Course - Testing Spring Beginner to Guru](https://www.udemy.com/testing-spring-boot-beginner-to-guru/?couponCode=GITHUB_REPO)
