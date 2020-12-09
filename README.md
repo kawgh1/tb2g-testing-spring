@@ -9,6 +9,28 @@ So this project has the standard JSP, XML, etc. structure
     - JUnit 4 and JUnit 5
     
     - Spring MVC Test
+        - Spring MVC Test is used for testing interactions with Spring MVC Controllers
+        - Provides Servlet API Mock objects to mock the web environment
+            - MockHttpServletRequest
+            - MockHttpServletResponse
+        - DispatcherServlet - requests are routed through Spring MVC's DispatcherServlet
+        
+        - Spring MVC Test Configuration Modes
+            - Standalone Setup
+                - Very light weight - ideal for unit tests
+                - Tests one controller at a time
+                - Allows for testing of controller requests and responses
+                
+            - WebAppContextSetup
+                - Loads larger context of Spring Configuration
+                - Tests many controllers - per configuration
+                - Allows for testing of application config
+                
+        - Spring MVC Test uses a "fluent" API via several static imports
+            - MockMvcRequestBuilders.* - Builds request
+            - MockMvcResultMatchers.* - Create assertions against response
+            - MockMvcBuilders.* - Configure and build an instance of MockMvc
+        
         - Spring MVC Test does not use a running Servlet container
         - No network request is made (ie to port 80 or 8080)
         - HTML is not generated, thus templates are not executed (JSP, Thymeleaf, etc.)

@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.web;
+package org.springframework.samples.petclinic.webTestMVC;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,6 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.samples.petclinic.model.Vet;
 import org.springframework.samples.petclinic.model.Vets;
 import org.springframework.samples.petclinic.service.ClinicService;
+import org.springframework.samples.petclinic.web.VetController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ import static org.mockito.BDDMockito.then;
 /**
  * created by kw on 12/7/2020 @ 1:32 AM
  */
+// Spring Controller test without Spring MVC Test
 @ExtendWith(MockitoExtension.class)
 class VetControllerTest {
 
@@ -47,6 +49,8 @@ class VetControllerTest {
 
     @Test
     void showVetList() {
+
+        // since this is a basic Spring test, we are just testing POJOs, not the actual controller in a web context
 
         // when
         String view = vetController.showVetList(model);
